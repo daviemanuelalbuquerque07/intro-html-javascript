@@ -12,8 +12,6 @@ git status
 * (Só usa ele para iniciar um repo novo) inicializa um repositorio
 git init
 
-
-
 * adicionar os arquivos modificados para uma area onde vai ser salvos
 git add .
 
@@ -22,3 +20,7 @@ git commit -m comentario
 
 * salvar finalizar
 git push
+
+* 1. git add .
+* 2. git commit -m "criei uma tela de login"
+* 3. git push
