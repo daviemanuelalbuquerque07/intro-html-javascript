@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula :: 01</title>
+</head>
+<body>
+    <!--- do h1 até o h6 são niveis de titulo -->
+    <h1>Aula :: 01 :: h1</h1>
+
+    <!--- Formularios -->
+    <form>
+        <label for="nome">Nome
+            <input type="text" placeholder="nome" id="nome">
+        </label> <br><br>
+
+        <label for="n_corridas">Corridas do dia
+            <input type="text" placeholder="n. corridas" id="n_corridas"> 
+        </label> <br><br>
+
+        <label for="valor_abastecido">Valor abastecido
+            <input type="text" placeholder="valor abastecido" id="valor_abastecido"> 
+        </label> <br><br>
+
+        <label for="km_rodado">Km rodado
+            <input type="text" placeholder="km rodado" id="km_rodado"> 
+        </label> <br><br>
+
+        <label for="rc_dinheiro">Rebi dinheiro
+            <input type="text" placeholder="rebi dinh" id="rc_dinheiro">
+        </label> <br><br>
+
+        <label for="rc_conta">Rebi em Conta
+            <input type="text" placeholder="rebi conta" id="rc_conta"> 
+        </label> <br><br>
+
+        <button id="btn_calcular" onclick="calcular()">Calcular</button> 
+        <button id="btn_soma"      onclick="calcularConta()">Somar</button>
+        <button id="btn_validar">Validar</button>
+        <button id="btn_limpar" type="reset">Limpar</button>
+    </form>
+
+    <!--- Tabela -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>N.</th>
+                <th>email</th>
+                <th>Senha</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01</td>
+                <td>exemplo@gmail.com</td>
+                <td>123</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Stilos -->
+    <style>
+        button{
+            width: 120px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: blue;
+        }
+        input{
+            background-color: aquamarine;
+            outline: none;
+        }
+        button, input{
+            padding: 9px;
+            border: none;
+            border-radius: 10px;
+        }
+        #btn_calcular{ background-color: green; }
+        #btn_validar{ background-color: blueviolet; }
+        #btn_limpar{ background-color: red; }
+
+        table{
+            margin-top: 20px;
+        }
+    </style>
+
+    <!-- Ações ou processar informações -->
+     <script>
+
+        function calcular(){
+            var a = 150
+            var b = 3
+            var calculo = (a * b) / 2
+
+            alert("Resultado: " +  calculo )
+        }
+
+        function calcularConta(){
+            var Energia = 10
+            var Agual = 20
+            var internet = 30
+
+            var calculo = Energia + Agual + internet
+
+            alert("Resultado: " +  calculo )
+        }
+
+        /** Calculo Uber
+         *  ? nome do motorista
+         *  ? corridas do dia   15
+         *  ? rebi em dinheiro 250
+         *  ? rebi conta 350
+         *  
+         * 
+         *  # valor do combustivel 1.78
+         * 
+         *  1. calcular dinheiro por litro valorDinheiro / 1.78
+         *  calcular entradas dinheiro + conta
+         * 
+        */
+
+        var nome             = document.getElementById('nome')
+        var n_corridas       = document.getElementById('n_corridas')
+        var valor_abastecido = document.getElementById('valor_abastecido')
+        var km_rodado        = document.getElementById('km_rodado')
+        var rc_dinheiro      = document.getElementById('rc_dinheiro')
+        var rc_conta         = document.getElementById('rc_conta')
+        var btn              = document.getElementById('btn_validar')
+
+        function validarCampos(){
+
+            if(nome.value == '') { alert('Por favor digite seu nome');  return false; }
+
+            if(n_corridas.value == '') { alert('Por favor digite o numero de corridas'); return false; }
+
+            if(valor_abastecido.value == '') { alert('Por favor digite o valor abastecido'); return false; }
+
+            if(km_rodado.value == '') { alert('Por favor digite o km rodado do dia'); return false; }
+
+            if(rc_dinheiro.value == '') { alert('Por favor digite o dinheiro recebido'); return false; }
+
+            if(rc_conta.value == '') { alert('Por favor digite saldo recebido em conta'); return false; }
+
+            /** 
+                alert(nome.value)
+                alert(n_corridas.value)
+                alert(valor_abastecido.value)
+                
+                alert(km_rodado.value)
+                alert(rc_dinheiro.value)
+                alert(rc_conta.value)
+            */
+
+            /**  */
+                console.log("Nome: " + nome.value)
+                console.log("N. Corridas: " + n_corridas.value)
+                console.log("Valor Abastecido: " + valor_abastecido.value)
+
+                console.log("Km rodadoe: " + km_rodado.value)
+                console.log("Recebi em dinheiro: " + rc_dinheiro.value)
+                console.log("Recebi em conta: " + rc_conta.value)
+        }
+
+        btn.addEventListener("click", function(e) {
+            e.preventDefault()
+            
+            validarCampos()
+            calcularCombustivel()
+        })        
+
+        function calcularCombustivel( valorCombustivel = 1.88 , valorDinheiro = 100 ){
+            valorCombustivel = 1.88
+            valorDinheiro = 100
+
+            rs = ( valorDinheiro / valorCombustivel )
+
+            alert('Numero de licros: ' + rs.toFixed(2))
+            console.log('Numero de licros: ' + rs.toFixed(2))
+        }
+
+     </script>
+
+</body>
+</html>

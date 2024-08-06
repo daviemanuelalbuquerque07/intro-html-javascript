@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula :: 01</title>
+</head>
+<body>
+    <!--- do h1 até o h6 são niveis de titulo -->
+    <h1>Aula :: 03 </h1>
+
+    <!--- Formularios -->
+    <form>
+        <label for="nome">Nome</label>
+        <input type="text" placeholder="nome" id="nome">
+        
+        <label for="n_corridas">Corridas do dia </label>
+        <input type="text" placeholder="n. corridas" id="n_corridas"> 
+        
+        <label for="valor_abastecido">Valor abastecido </label>
+        <input type="text" placeholder="valor abastecido" id="valor_abastecido"> 
+       
+        <label for="km_rodado">Km rodado </label>
+        <input type="text" placeholder="km rodado" id="km_rodado"> 
+       
+
+        <label for="rc_dinheiro">Rebi dinheiro</label>
+        <input type="text" placeholder="rebi dinh" id="rc_dinheiro">
+        
+        <label for="rc_conta">Rebi em Conta</label>
+        <input type="text" placeholder="rebi conta" id="rc_conta"> 
+        
+        <div class="group">
+            <button id="btn_calcular" onclick="calcular()">Calcular</button> 
+            <button id="btn_soma"      onclick="calcularConta()">Somar</button>
+            <button id="btn_validar">Validar</button>
+            <button id="btn_limpar" type="reset">Limpar</button>
+        </div>
+    </form>
+
+    <!--- Tabela -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>N.</th>
+                <th>email</th>
+                <th>Senha</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01</td>
+                <td>exemplo@gmail.com</td>
+                <td>123</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Ações ou processar informações -->
+     <script src="processamento.js"> </script>
+
+</body>
+</html>
