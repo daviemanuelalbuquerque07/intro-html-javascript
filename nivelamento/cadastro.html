@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Cadastro</title>
 </head>
 <body>
     
     <form>
+        <h3>Cadastro novo usuário</h3>
+        <input type="email"     placeholder="nome completo" autocomplete="none">
         <input type="email"     placeholder="e-mail" autocomplete="none">
         <input type="password"  placeholder="senha">
 
-        <a href="http://127.0.0.1:5500/nivelamento/cadastro.html">
-            Entrar
-        </a>
+        <div class="btn">
+            <a href="http://127.0.0.1:5500/nivelamento/login.html">
+                Cadastrar
+            </a>
+            <button>Sair</button>
+        </div>
     </form>
 
     <style>
@@ -30,19 +35,26 @@
         }
 
         form{
-            
             margin-top: 50px;
             padding: 10px;
-            padding-top: 50px;
             gap: 10px;
             width: 200px;
-            height: 150px;
+            height: 300px;
             display: flex;
             flex-direction: column;
 
             border-top-left-radius: 50px;
 
-            background-color: blueviolet;
+            background-color: #1c1c1c;
+        }
+
+        h3{
+            font-size: 15px;
+            color: white;
+            padding: 10px;
+            border-top-left-radius: 20px;
+            text-align: center;
+            background-color: #ff8b52;
         }
 
         input, a, button{
@@ -61,9 +73,13 @@
         input:hover{
             font-size: 15px;
         }
-
-        a, button{
-            margin-top: 15px;
+        .btn{
+            gap: 10px;
+            display: flex;
+        }
+        a,button{
+            margin-top: 10px;
+            width: 100px;
             color: white;
             cursor: pointer;
             transition: .7s;
