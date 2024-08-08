@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 06</title>
+</head>
+<body>
+    <form id="form1">
+        <h1>Aula 06 - <span></span></h1>
+        <p></p>
+        <input type="text" name="nome" placeholder="nome completo">
+        <br><br>
+        <input type="text" name="email" placeholder="email">
+        <br><br>
+        <button id="btn">Cadastrar</button>
+    </form>
+
+    <script>
+        var f = document.querySelector("#form1")
+        var btn = f.btn
+
+        var span = document.querySelector("span")
+        var p = document.querySelector("p")
+
+        var nome = f.nome
+        var email = f.email
+
+        btn.onclick = (event) => {
+            event.preventDefault()
+
+            span.textContent = nome.value
+            p.textContent = email.value
+        }
+    </script>
+
+</body>
+</html>

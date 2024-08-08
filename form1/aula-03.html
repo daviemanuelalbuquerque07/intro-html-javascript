@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03</title>
+</head>
+<body>
+    <form id="form1">
+        <h1>Aula 03 - <span></span></h1>
+        <p></p>
+        <input type="text" name="nome" placeholder="nome completo">
+        <br><br>
+        <input type="text" name="email" placeholder="email">
+        <br><br>
+        <button id="btn">Cadastrar</button>
+    </form>
+
+    <script>
+        var f = document.querySelector("#form1") // pegados os valores do formulario
+        var btn = f.btn // pegando o valor do btn
+
+        // pegar os dados do span, p
+        var span = document.querySelector("span") // pegando a referência do span
+        var p = document.querySelector("p") // pegando a referência do p
+
+        // pegar os valores dos inputs
+        var nome = f.nome // pegando a referência do input nome
+        var email = f.email // pegando a referência do input email
+
+        btn.onclick = (event) => {
+            event.preventDefault()
+
+            // atribuindo valores
+            span.textContent = nome.value
+            p.textContent = email.value
+
+            // alert('testando ...')
+
+            // verifica se tem erro nas referências mostrar os valores no console
+            // console.log(nome.value)
+            // console.log(email.value)
+            // console.log(span)
+            // console.log(p)
+        }
+    </script>
+</body>
+</html>
