@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 09</title>
+</head>
+<body>
+    <h1>Aula 09</h1>
+
+    <div class="div">A1</div>
+    <input type="text" placeholder="digite seu nome">
+    <button id="btn1">Mudar</button>
+    <button id="btn2">Dinamicamente</button>
+    <button id="btn3">Limpar</button>
+
+    <script>
+        var div1 = document.querySelector(".div")
+        var input = document.querySelector("input")
+        var mudar1 = document.querySelector("#btn1")
+        var mudar2 = document.querySelector("#btn2")
+        var mudar3 = document.querySelector("#btn3")
+    
+        mudar1.onclick = () => {
+            div1.textContent = "Davi recebendo por função"
+        }
+
+        mudar2.onclick = () => { div1.textContent = input.value }
+        mudar3.onclick = () => { div1.textContent = "" }   
+    </script>
+</body>
+</html>

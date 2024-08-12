@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11</title>
+</head>
+<body>
+    <h1>Aula 11 Calcular</h1>
+
+    <div class="div">0</div>
+    <input type="text" id="valor1" placeholder="Valor1"><br>
+    <input type="text" id="valor2" placeholder="Valor2"><br>
+    <button>Soma</button>
+
+    <script>
+        var visor = document.querySelector("div")
+        var soma = document.querySelector("button")
+                                
+        soma.addEventListener("click", function(event) {
+            event.preventDefault()
+
+            var valor1 = document.querySelector("#valor1")
+            var valor2 = document.querySelector("#valor2")
+
+            var soma = parseInt(valor1.value) + parseInt(valor2.value)
+
+            var mult = parseInt(valor1.value) * parseInt(valor2.value)
+            var sub = parseInt(valor1.value) - parseInt(valor2.value)
+            var div = parseInt(valor1.value) / parseInt(valor2.value)
+
+            visor.textContent = soma
+
+            console.log("soma: " + soma)
+            console.log("mult: " + mult)
+            console.log("sub: " + sub)
+            console.log("div: " + div)
+
+            valor1.value = ""
+            valor2.value = ""
+        })
+    </script>
+</body>
+</html>

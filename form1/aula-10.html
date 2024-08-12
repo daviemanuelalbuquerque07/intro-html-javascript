@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10</title>
+</head>
+<body>
+    <h1>Aula 10</h1>
+
+    <div class="div">A1</div>
+    <input type="text" placeholder="digite seu nome">
+    <button>Limpar</button>
+
+    <script>
+        var div1 = document.querySelector(".div")
+        var input = document.querySelector("input")
+        var limpar = document.querySelector("button")
+
+        limpar.onclick = () => { 
+            div1.textContent = "A1" 
+            input.value = ""
+        }
+
+        //change click, mouseover, mouseleave, mouseup, mousedown, dblclick
+                                
+        input.addEventListener("change", function(event) {
+            event.preventDefault()
+
+            div1.textContent = input.value
+        })
+    </script>
+</body>
+</html>
